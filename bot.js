@@ -1,30 +1,30 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var prefix = "+";
-var adminprefix = '#'
+var adminprefix = 'S'
 
 
-const developers = ["ID","ID"]
+const developers = ["572087847964770304"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
       
-  if (message.content.startsWith(adminprefix + 'setg')) {
+  if (message.content.startsWith(adminprefix + 'Lst2')) {
     client.user.setGame(argresult);
       message.channel.send(`**تـــ تغيير الحالة ــم   ${argresult}**`)
   } else 
      if (message.content === (adminprefix + "leave")) {
     message.guild.leave();        
   } else  
-  if (message.content.startsWith(adminprefix + 'setw')) {
+  if (message.content.startsWith(adminprefix + 'Lst3')) {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.send(`**تـــ تغيير الحالة ــم   ${argresult}**`)
   } else 
-  if (message.content.startsWith(adminprefix + 'setl')) {
+  if (message.content.startsWith(adminprefix + 'Lst4')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`**تـــ تغيير الحالة ــم   ${argresult}**`)
   } else 
-  if (message.content.startsWith(adminprefix + 'sets')) {
+  if (message.content.startsWith(adminprefix + 'Lst')) {
     client.user.setGame(argresult, "https://www.twitch.tv/wolfgod1224");
       message.channel.send(`**تـــ تغيير الحالة ــم**`)
   }
